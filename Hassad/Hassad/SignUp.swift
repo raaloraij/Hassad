@@ -17,7 +17,7 @@ struct SignUp: View {
     var body: some View {
         
         NavigationView{
-//adding a navigationView just in case cause idk if i should have a button or a navigationLink hehe
+
             ZStack{
                 
                 RoundedRectangle(cornerRadius: 33, style: .circular)
@@ -82,12 +82,6 @@ struct SignUp: View {
                     HStack(spacing: 0){
                         Text("Don't Have an Account?")
                             .foregroundColor(Color.gray)
-    //                    Button("Sign Up") {
-    //                        print("sign up link")
-    //                    }
-    //                    .fontWeight(.bold)
-    //                    .foregroundColor(Color.black)
-    //                    .offset(x: 90, y: 85)
                         NavigationLink(destination: SignIn().navigationBarBackButtonHidden(true)) {
                             Text(" Sign up")
                                 .fontWeight(.bold)
@@ -97,17 +91,11 @@ struct SignUp: View {
                     .offset(x: 0, y: 90)
                 }
                 
-
-                
-
-                
-
-
-
             }
             .frame(width: /*@START_MENU_TOKEN@*/800.0/*@END_MENU_TOKEN@*/, height: /*@START_MENU_TOKEN@*/800.0/*@END_MENU_TOKEN@*/)
             .background(Color(UIColor(named: "lightBlue")!))
-        }    }
+        }
+    }
 }
 
 struct SignUp_Previews: PreviewProvider {

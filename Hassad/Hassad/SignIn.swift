@@ -26,14 +26,16 @@ struct SignIn: View {
     var body: some View {
         
         NavigationView{
-//adding a navigationView just in case cause idk if i should have a button or a navigationLink hehe
+            
             ZStack{
                 
                 RoundedRectangle(cornerRadius: 33, style: .circular)
                     .fill(Color(UIColor(named: "defultColor")!))
                     .frame(width: 396, height: 666)
                     .offset(x: 0, y: 95)
+                
                 VStack {
+                    
                     Text("Welcome Back")
                         .font(.title2)
                         .fontWeight(.bold)
@@ -48,7 +50,6 @@ struct SignIn: View {
                         .overlay(RoundedRectangle(cornerRadius: 14)
                             .stroke(Color("borders"), lineWidth: 1))
                         .offset(x:0, y: -5)
-                            
 
                     SecureField("\(Image(systemName: "lock.fill")) Password", text: $password)
                         .frame(width: 323)
@@ -59,7 +60,6 @@ struct SignIn: View {
                         .stroke(Color("borders"), lineWidth: 1))
                         .offset(x:0, y: 10)
 
-                    
                     Button("Sign In") {
                         print("sss")
                     }
@@ -73,6 +73,7 @@ struct SignIn: View {
                     .offset(x: 0,y: 25)
 
                     HStack(spacing: 0){
+                        
                         Text("Forgot your")
                         Button(" Password") {
                             print("reset password link")
@@ -83,14 +84,9 @@ struct SignIn: View {
                     .offset(x: 0, y: 40)
                     
                     HStack{
+                        
                         Text("Don't Have an Account?")
                             .foregroundColor(Color.gray)
-    //                    Button("Sign Up") {
-    //                        print("sign up link")
-    //                    }
-    //                    .fontWeight(.bold)
-    //                    .foregroundColor(Color.black)
-    //                    .offset(x: 90, y: 85)
                         NavigationLink(destination: SignUp().navigationBarBackButtonHidden(true)) {
                             Text("Sign up")
                                 .fontWeight(.bold)
@@ -98,7 +94,9 @@ struct SignIn: View {
                         }
                     }
                     .offset(x: 0, y: 110)
+                    
                     ZStack{
+                        
                         Divider()
                             .frame(width: 350.0)
                         Text("or")
@@ -118,23 +116,14 @@ struct SignIn: View {
                         .background(Color.black)
                         .cornerRadius(8)
                         .offset(x: 0, y: 100)
-
+                    
                 }
                 
-
-                
-                
-
-                
-
-
-
             }
             .frame(width: /*@START_MENU_TOKEN@*/800.0/*@END_MENU_TOKEN@*/, height: /*@START_MENU_TOKEN@*/800.0/*@END_MENU_TOKEN@*/)
             .background(Color(UIColor(named: "lightBlue")!))
         }
     }
-    
 }
 
 struct SignIn_Previews: PreviewProvider {
